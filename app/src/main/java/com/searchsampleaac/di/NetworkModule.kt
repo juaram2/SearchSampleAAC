@@ -1,6 +1,6 @@
 package com.searchsampleaac.di
 
-import com.searchsampleaac.api.SearchService
+import com.searchsampleaac.data.api.SearchService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

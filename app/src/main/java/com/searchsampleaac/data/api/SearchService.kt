@@ -1,4 +1,4 @@
-package com.searchsampleaac.api
+package com.searchsampleaac.data.api
 
 import android.util.Log
 import com.searchsampleaac.BuildConfig

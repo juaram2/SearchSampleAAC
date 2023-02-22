@@ -2,9 +2,9 @@ package com.searchsampleaac.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.searchsampleaac.api.SearchService
+import com.searchsampleaac.data.api.SearchService
+import com.searchsampleaac.data.SearchRepositoryImpl.Companion.NETWORK_PAGE_SIZE
 import com.searchsampleaac.data.model.SearchItemModel
-import com.searchsampleaac.data.SearchRepository.Companion.NETWORK_PAGE_SIZE
 
 private const val STARTING_PAGE_INDEX = 1
 
