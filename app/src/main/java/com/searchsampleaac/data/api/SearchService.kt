@@ -30,6 +30,7 @@ interface SearchService {
 
     companion object {
         private const val BASE_URL = "https://api.github.com/"
+        private const val AUTH = "Bearer ${BuildConfig.TOKEN}"
 
         fun create(): SearchService {
             val logger = HttpLoggingInterceptor { message ->
@@ -50,7 +51,7 @@ interface SearchService {
                     val request = chain.request().newBuilder()
                         .addHeader("Content-Type", "application/json")
                         .addHeader("Accept", "application/vnd.github+json")
-                        .addHeader("Authorization", "Bearer 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")
+                        .addHeader("Authorization", AUTH)
                         .addHeader("X-GitHub-Api-Version", "2022-11-28")
                     chain.proceed(request.build())
                 }
