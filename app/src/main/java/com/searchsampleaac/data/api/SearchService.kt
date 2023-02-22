@@ -50,7 +50,7 @@ interface SearchService {
                     val request = chain.request().newBuilder()
                         .addHeader("Content-Type", "application/json")
                         .addHeader("Accept", "application/vnd.github+json")
-                        .addHeader("Authorization", "Bearer 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")
+                        .addHeader("Authorization", "Bearer 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")
                         .addHeader("X-GitHub-Api-Version", "2022-11-28")
                     chain.proceed(request.build())
                 }
