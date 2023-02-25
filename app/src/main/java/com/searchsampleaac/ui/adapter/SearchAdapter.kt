@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.DiffUtil
 import com.searchsampleaac.data.model.SearchItemModel
 import com.searchsampleaac.databinding.ItemUserBinding
 
-class SearchAdapter : PagingDataAdapter<SearchItemModel, SearchViewHolder>(UserComparator) {
+class SearchAdapter constructor(private val listener: OnUserClickListener) : PagingDataAdapter<SearchItemModel, SearchViewHolder>(UserComparator) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchViewHolder {
         return SearchViewHolder(
             ItemUserBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ), listener
         )
     }
 

@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.searchsampleaac.databinding.ActivityMainBinding
+import com.searchsampleaac.ui.adapter.OnUserClickListener
 import com.searchsampleaac.ui.adapter.SearchAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -54,7 +55,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ActivityMainBinding.bindList(charSequence: CharSequence) {
-        val adapter = SearchAdapter()
+        val listener = object : OnUserClickListener {
+            override fun userClick(user: String) {
+                TODO("Not yet implemented")
+            }
+        }
+        val adapter = SearchAdapter(listener)
         list.adapter = adapter
 
         lifecycleScope.launch {
