@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.searchsampleaac.data.SearchRepository
+import com.searchsampleaac.data.model.RepoItemModel
 import com.searchsampleaac.data.model.SearchItemModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
@@ -20,4 +21,7 @@ class SearchViewModel @Inject constructor(
         return repository.getSearchResultStream(query).cachedIn(viewModelScope)
     }
 
+    fun getRepo(username: String): Flow<PagingData<RepoItemModel>> {
+        return repository.getUserRepoStream(username).cachedIn(viewModelScope)
+    }
 }

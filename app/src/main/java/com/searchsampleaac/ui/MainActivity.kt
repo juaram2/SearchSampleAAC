@@ -1,5 +1,6 @@
 package com.searchsampleaac.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
@@ -57,7 +58,10 @@ class MainActivity : AppCompatActivity() {
     private fun ActivityMainBinding.bindList(charSequence: CharSequence) {
         val listener = object : OnUserClickListener {
             override fun userClick(user: String) {
-                TODO("Not yet implemented")
+                val intent = Intent(this@MainActivity, RepoActivity::class.java).apply {
+                    putExtra("user", user)
+                }
+                startActivity(intent)
             }
         }
         val adapter = SearchAdapter(listener)
