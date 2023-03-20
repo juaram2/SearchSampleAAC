@@ -6,9 +6,9 @@ Please add `token="YOUR_GITHUB_TOKEN"` in `local.properties`
 * Kotlin
 * MVVM
 * Coroutine
+* Flow
+* Paging
 * Retrofit
 * Hilt
 * DataBinding
-* LiveData
-* Navigation
 * Glide
